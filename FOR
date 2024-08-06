@@ -1,0 +1,13 @@
+somar_pares = 0
+
+primeira = int(input('Informe o primeiro numero\n -> '))
+ultimo = int(input('Informe o ultimo numero\n -> '))
+for _ in range(primeira,ultimo +1):
+    if _ % 2 == 0:
+
+        somar_pares += _
+
+if somar_pares == 0:
+    print('Não contem numeros pares no intervalo')
+else:
+    print(f'A soma dos intervlo dos pares é {somar_pares}')
