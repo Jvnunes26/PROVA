@@ -1,0 +1,24 @@
+alunos = int(input('Informe a quantidade de alunos\n -> '))
+soma_medias = 0
+
+for _ in range(alunos):
+    nome = input(f'\nInforme o nome do aluno {_+1}\n -> ')
+    nota1 = float(input('Informe a primeira nota\n -> '))
+    nota2 = float(input('Informe a segunda nota\n -> '))
+    nota3 = float(input('Informe a terceira nota\n -> '))
+    
+    media = (nota1 + nota2 + nota3) / 3
+    soma_medias += media
+
+    if media >= 7.0:
+        status = 'Aprovado'
+    else:
+        status = 'Reprovado'
+
+    print(f'\nAluno: {nome}')
+    print(f'Notas: {nota1}, {nota2}, {nota3}')
+    print(f'Média: {media:.2f}')
+    print(f'Status: {status}')
+
+media_geral = soma_medias / alunos
+print(f'\nMédia geral da turma: {media_geral:.2f}')
