@@ -1,0 +1,8 @@
+lista = {}
+
+lista['nome'] = input("Digite o nome do contato\n ->  ")
+lista['telefone'] = input("Digite o número de telefone\n -> ")
+lista['email'] = input("Digite o endereço de email\n -> ")
+
+for chave, valor in lista.items():
+    print(f"{chave.capitalize()}: {valor}")
