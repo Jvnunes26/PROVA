@@ -1,0 +1,20 @@
+produtos = {}  
+while True:
+    digitar = input('Digite o nome do produto\n -> ')
+
+    if digitar in produtos:
+        print('Este item já existe!')
+
+    valor = float(input('Digite o valor do produto\n -> '))
+    
+    produtos[digitar] = valor 
+
+    print('Produto adicionado com sucesso!')
+    print(f'Item {digitar} R$: {valor}')
+
+    if len(produtos) == 5:
+        for i in produtos:
+            print(f'Item {i} numero: {produtos[i]}')
+        total = sum(produtos.values())
+        print(f'O valor total dos produtos é: R${total:.2f}')
+        break
